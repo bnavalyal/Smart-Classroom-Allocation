@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 330 104" role="img" aria-labelledby="title desc">
+<title id="title">REVA University</title><desc id="desc">REVA University wordmark with a geometric endless-knot inspired emblem.</desc>
+<g fill="none" stroke="#d85b35" stroke-width="5.2" stroke-linecap="round" stroke-linejoin="round">
+ <path d="M28 21 L49 21 L60 34 L49 47 L28 47 L17 34 Z"/>
+ <path d="M28 21 L28 47 M17 34 L60 34 M17 34 L28 21 L49 47 L60 34 L49 21 L28 47"/>
+</g>
+<text x="77" y="43" fill="#c74d2b" font-family="Arial, Helvetica, sans-serif" font-size="39" font-weight="800" letter-spacing="1.8">REVA</text>
+<text x="80" y="65" fill="#68717d" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="5.2">UNIVERSITY</text>
+<path d="M80 77 H303" stroke="#d9dfe7" stroke-width="1.5"/>
+<text x="80" y="92" fill="#7c8795" font-family="Arial, Helvetica, sans-serif" font-size="8.5" font-weight="600" letter-spacing="1.4">CAMPUS OPERATIONS</text>
+</svg>
