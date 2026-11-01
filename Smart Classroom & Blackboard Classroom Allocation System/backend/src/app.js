@@ -18,20 +18,28 @@ const allowedOrigins = new Set([
     : ["http://localhost:5173", "http://127.0.0.1:5173"]),
   ...(process.env.FRONTEND_ORIGIN || "")
     .split(",")
-    .map((origin) => origin.trim())
+    .map((origin) => origin.trim().replace(/\/+$/, ""))
     .filter(Boolean),
 ]);
 function isAllowedOrigin(origin) {
-  if (allowedOrigins.has(origin)) {
+  if (!origin) {
+    return true;
+  }
+  const normalized = origin.replace(/\/+$/, "");
+  if (allowedOrigins.has(normalized)) {
     return true;
   }
   if (process.env.NODE_ENV === "production") {
-    return false;
+    return Array.from(allowedOrigins).some(
+      (allowed) => allowed.includes(".vercel.app") && normalized.endsWith(".vercel.app")
+    );
   }
   try {
-    const parsedOrigin = new URL(origin);
-    return parsedOrigin.protocol === "http:" &&
-      ["localhost", "127.0.0.1"].includes(parsedOrigin.hostname);
+    const parsedOrigin = new URL(normalized);
+    return (
+      parsedOrigin.protocol === "http:" &&
+      ["localhost", "127.0.0.1"].includes(parsedOrigin.hostname)
+    );
   } catch {
     return false;
   }
@@ -79,6 +87,17 @@ app.use(session({
     maxAge: 1000 * 60 * 60 * 8,
   },
 }));
+
+app.get("/", (req, res) => {
+  res.json({
+    status: "OK",
+    service: "Smart Classroom Allocation Backend API",
+    endpoints: {
+      health: "/api/health",
+      dbHealth: "/api/db-health",
+    },
+  });
+});
 
 app.get("/api/health", (req, res) => {
   res.json({
