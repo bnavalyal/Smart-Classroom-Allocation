@@ -10,7 +10,7 @@ const authRoutes = require("./routes/authRoutes");
 
 const app = express();
 if (process.env.NODE_ENV === "production" && (!process.env.SESSION_SECRET || !process.env.MONGODB_URI)) {
-  throw new Error("SESSION_SECRET and MONGODB_URI must be configured in production.");
+  console.warn("WARNING: SESSION_SECRET and/or MONGODB_URI are not set in environment variables. Database operations will be unavailable until configured.");
 }
 const allowedOrigins = new Set([
   ...(process.env.NODE_ENV === "production"
@@ -92,6 +92,7 @@ app.get("/", (req, res) => {
   res.json({
     status: "OK",
     service: "Smart Classroom Allocation Backend API",
+    databaseConfigured: Boolean(process.env.MONGODB_URI),
     endpoints: {
       health: "/api/health",
       dbHealth: "/api/db-health",
@@ -103,13 +104,17 @@ app.get("/api/health", (req, res) => {
   res.json({
     status: "OK",
     message: "Classroom Allocation API is running",
+    databaseConfigured: Boolean(process.env.MONGODB_URI),
   });
 });
 
 app.get("/api/db-health", (req, res) => {
   const connected = mongoose.connection.readyState === 1;
 
-  res.json({ connected });
+  res.json({
+    connected,
+    databaseConfigured: Boolean(process.env.MONGODB_URI),
+  });
 });
 
 app.use("/api/auth", authRoutes);

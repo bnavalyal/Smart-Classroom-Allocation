@@ -2,12 +2,13 @@
   "name": "classroom-allocation-backend",
   "private": true,
   "version": "1.0.0",
+  "main": "index.js",
   "engines": {
-    "node": ">=20.19.0"
+    "node": "22.x"
   },
   "scripts": {
-    "start": "node src/server.js",
-    "dev": "node --watch src/server.js",
+    "start": "node index.js",
+    "dev": "node --watch index.js",
     "bootstrap:accounts": "node scripts/createBootstrapAccounts.js",
     "validate:timetable": "node scripts/generateTimetableValidationReport.js",
     "test": "node --test"
