@@ -77,7 +77,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(session({
   name: "classroom_session",
   secret: process.env.SESSION_SECRET || crypto.randomBytes(32).toString("hex"),
-  ...(process.env.MONGODB_URI ? { store: new MongoSessionStore() } : {}),
+  ...(process.env.MONGODB_URI && mongoose.connection.readyState === 1 ? { store: new MongoSessionStore() } : {}),
   resave: false,
   saveUninitialized: false,
   cookie: {
