@@ -1,0 +1,27 @@
+{
+  "name": "classroom-allocation-backend",
+  "private": true,
+  "version": "1.0.0",
+  "main": "index.js",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "bootstrap:accounts": "node scripts/createBootstrapAccounts.js",
+    "validate:timetable": "node scripts/generateTimetableValidationReport.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.6",
+    "express": "^5.1.0",
+    "express-session": "^1.19.0",
+    "mongoose": "^9.11.0"
+  },
+  "devDependencies": {
+    "supertest": "^7.3.1"
+  }
+}

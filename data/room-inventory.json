@@ -1,0 +1,27 @@
+{
+  "source": "User-supplied room inventory",
+  "rooms": [
+    { "roomNumber": "314", "block": "SVB", "capacity": 120, "classroomType": "SMART", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "218", "block": "SVB", "capacity": 120, "classroomType": "SMART", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "219", "block": "SVB", "capacity": null, "classroomType": "SMART", "capacityStatus": "UNCONFIRMED" },
+    { "roomNumber": "220", "block": "SVB", "capacity": null, "classroomType": "SMART", "capacityStatus": "UNCONFIRMED" },
+    { "roomNumber": "506", "block": "SMVB", "capacity": 120, "classroomType": "SMART", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "507", "block": "SMVB", "capacity": 60, "classroomType": "SMART", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "504", "block": "SMVB", "capacity": 60, "classroomType": "SMART", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "512", "block": "SMVB", "capacity": 60, "classroomType": "SMART", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "308", "block": "SMVB", "capacity": 60, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "317", "block": "SMVB", "capacity": 60, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "F1", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "F2", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "S1", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "S2", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "T1", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "T2", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "T3", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "T4", "block": "SVB", "capacity": 30, "classroomType": "LAB", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "310", "block": "SMVB", "capacity": 30, "classroomType": "REGULAR", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "311", "block": "SMVB", "capacity": 30, "classroomType": "REGULAR", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "312", "block": "SMVB", "capacity": 30, "classroomType": "REGULAR", "capacityStatus": "CONFIRMED" },
+    { "roomNumber": "313", "block": "SMVB", "capacity": 30, "classroomType": "REGULAR", "capacityStatus": "CONFIRMED" }
+  ]
+}
